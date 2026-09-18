@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>악어 사문 모의고사 받기</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FFFFFF; --ink:#1E2620; --muted:#5C665E; --line:#D5DBD4;
+  --croc:#2F6A3C; --croc-soft:#E7EFE6; --on-croc:#FFFFFF;
+  --serif:"Noto Serif KR","Nanum Myeongjo","AppleMyungjo","Batang",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --paper:#121714; --ink:#E8EDE8; --muted:#9AA59C; --line:#2C352E;
+    --croc:#7FB88A; --croc-soft:#1C2A20; --on-croc:#0E1A11;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.5;word-break:keep-all}
+main{max-width:520px;margin:0 auto;padding:32px 20px 56px}
+
+.period{display:inline-block;border:1.5px solid var(--ink);border-radius:999px;
+  padding:2px 16px;font-family:var(--serif);font-weight:600;font-size:15px}
+h1{font-family:var(--serif);font-weight:900;font-size:clamp(46px,14vw,64px);
+  line-height:1.08;letter-spacing:-.02em;margin:14px 0 6px}
+.sub{margin:0;color:var(--muted);font-size:15px}
+.rule{height:7px;border-top:3px solid var(--ink);border-bottom:1px solid var(--ink);margin-top:22px}
+
+.warn{display:none;margin:20px 0 0;padding:12px 14px;border-radius:10px;
+  background:var(--croc-soft);color:var(--ink);font-size:14px}
+.warn.show{display:block}
+
+.all{display:flex;flex-direction:column;align-items:center;justify-content:center;
+  width:100%;min-height:64px;margin:24px 0 6px;border:0;border-radius:12px;
+  background:var(--croc);color:var(--on-croc);font:inherit;font-size:18px;font-weight:800;cursor:pointer;
+  text-decoration:none;-webkit-tap-highlight-color:transparent}
+.all small{font-size:13px;font-weight:500;opacity:.85}
+
+ol{list-style:none;margin:10px 0 0;padding:0}
+li{display:grid;grid-template-columns:64px 1fr 1fr;gap:10px;align-items:center;
+  padding:16px 0;border-bottom:1px solid var(--line)}
+.num{font-family:var(--serif);font-weight:900;font-size:28px}
+
+.dl{display:flex;flex-direction:column;align-items:center;justify-content:center;
+  min-height:58px;padding:6px;border:1.5px solid var(--ink);border-radius:10px;
+  color:var(--ink);text-decoration:none;font-weight:700;font-size:16px;cursor:pointer;
+  -webkit-tap-highlight-color:transparent}
+.dl small{font-weight:400;font-size:12px;color:var(--muted)}
+.dl:active,.all:active{transform:scale(.97)}
+.dl.done{border-color:var(--croc);background:var(--croc-soft);color:var(--croc)}
+.dl.done small{color:var(--croc)}
+.dl:focus-visible,.all:focus-visible{outline:3px solid var(--croc);outline-offset:3px}
+
+.note{margin-top:26px;font-size:14px;color:var(--muted)}
+.note p{margin:0 0 6px}
+.err{color:#B3261E}
+@media (prefers-color-scheme: dark){ .err{color:#F2B8B5} }
+@media (prefers-reduced-motion: reduce){ .dl:active,.all:active{transform:none} }
+</style>
+</head>
+<body>
+<main>
+  <span class="period">제4교시</span>
+  <h1>사회·문화</h1>
+  <p class="sub">2027학년도 수능 대비 악어 사문 모의고사 1~4회</p>
+  <div class="rule" aria-hidden="true"></div>
+
+  <p class="warn" id="warn">카카오톡이나 인스타그램 안에서 열면 다운로드가 막힐 수 있어요. 오른쪽 위 메뉴에서 <b>다른 브라우저로 열기</b>를 눌러 주세요.</p>
+
+  <a class="all" id="all" href="https://github.com/imoney0513/saemun/releases/latest/download/saemun_all.zip" download="saemun_all.zip">
+    <span>1~4회 전부 받기</span>
+    <small id="allInfo">ZIP 파일 하나, 3.2MB</small>
+  </a>
+
+  <ol>
+    <li><span class="num">1회</span><a class="dl" href="https://github.com/imoney0513/saemun/releases/latest/download/saemun_1_q.pdf" download="saemun_1_q.pdf"><span>문제지</span><small>1.6MB</small></a><a class="dl" href="https://github.com/imoney0513/saemun/releases/latest/download/saemun_1_a.pdf" download="saemun_1_a.pdf"><span>해설</span><small>248KB</small></a></li>
+    <li><span class="num">2회</span><a class="dl" href="https://github.com/imoney0513/saemun/releases/latest/download/saemun_2_q.pdf" download="saemun_2_q.pdf"><span>문제지</span><small>317KB</small></a><a class="dl" href="https://github.com/imoney0513/saemun/releases/latest/download/saemun_2_a.pdf" download="saemun_2_a.pdf"><span>해설</span><small>252KB</small></a></li>
+    <li><span class="num">3회</span><a class="dl" href="https://github.com/imoney0513/saemun/releases/latest/download/saemun_3_q.pdf" download="saemun_3_q.pdf"><span>문제지</span><small>269KB</small></a><a class="dl" href="https://github.com/imoney0513/saemun/releases/latest/download/saemun_3_a.pdf" download="saemun_3_a.pdf"><span>해설</span><small>276KB</small></a></li>
+    <li><span class="num">4회</span><a class="dl" href="https://github.com/imoney0513/saemun/releases/latest/download/saemun_4_q.pdf" download="saemun_4_q.pdf"><span>문제지</span><small>264KB</small></a><a class="dl" href="https://github.com/imoney0513/saemun/releases/latest/download/saemun_4_a.pdf" download="saemun_4_a.pdf"><span>해설</span><small>245KB</small></a></li>
+  </ol>
+
+  <div class="note">
+    <p>아이폰은 파일 앱의 다운로드 폴더에 저장돼요.</p>
+    <p class="err" id="err" role="alert"></p>
+  </div>
+</main>
+
+<script>
+(function(){
+  var ua = navigator.userAgent || "";
+  if (/KAKAOTALK|Instagram|FBAN|FBAV|NAVER|Line\//i.test(ua)) {
+    document.getElementById("warn").classList.add("show");
+  }
+
+  function markDone(el){
+    el.classList.add("done");
+    var s = el.querySelector("small");
+    if (s) s.textContent = "받았어요 ✓";
+  }
+
+  Array.prototype.slice.call(document.querySelectorAll("a.dl")).forEach(function(link){
+    link.addEventListener("click", function(){ markDone(link); });
+  });
+
+  document.getElementById("all").addEventListener("click", function(){
+    document.getElementById("allInfo").textContent = "받았어요 ✓";
+  });
+})();
+</script>
+</body>
+</html>
